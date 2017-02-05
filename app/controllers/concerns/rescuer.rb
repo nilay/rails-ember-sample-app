@@ -28,8 +28,8 @@ module Rescuer
     end
 
     # Handle Missing required params error with custom JSON response
-    rescue_from CustomErrors::MissingParams do |e|
-      render_bad_request message: 'These parameters are missing: ' + e.names.join(', ')
+    rescue_from MissingParams do |e|
+      render_bad_request 'These parameters are missing: ' + e.names.join(', ')
     end
 
   end

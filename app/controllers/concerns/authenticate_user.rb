@@ -1,4 +1,4 @@
-require 'jwt_auth_token'
+#require 'jwt_auth_token'
 
 module AuthenticateUser
   extend ActiveSupport::Concern

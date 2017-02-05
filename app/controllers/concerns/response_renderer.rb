@@ -18,38 +18,38 @@ module ResponseRenderer
 
   # Handle Rails exceptions with custom JSON response
   def render_500_error(message: 'Internal Server Error')
-    render_error message, 500
+    render_error message: message, status_code: 500
   end
 
   # Handle 400 errors with custom JSON response
   def render_bad_request(message: 'Not Found')
-    render_error message, 400
+    render_error message: message, status_code: 400
   end
 
   # Handle 422 errors with custom JSON response
   def render_unprocessable_entity(message: 'Unprocessible Entity')
-    render_error message, 422
+    render_error message: message, status_code: 422
   end
 
   # Handle 401 errors with custom JSON response
-  def render_unauthorized(message: "Unauthorised")
-    render_error message, 401
+  def render_unauthorized(message: 'Unauthorised')
+    render_error message: message, status_code: 401
   end
 
   # Handle 404 errors with custom JSON response
   def render_not_found( message: 'Not Found')
-    render_error message, 404
+    render_error message: message, status_code: 404
   end
 
   # Handle 403 errors with custom JSON response
   def render_forbidden(message: 'Forbidden')
-    render_error message, 403
+    render_error message: message, status_code: 403
   end
 
 
   # Common method to render create new resource
-  def render_created(message: 'Resource created successfully', data: nil)
-    render_success message, data, 201
+  def render_created message: , data: nil
+    render_succ message: message, data: data, status_code: 201
   end
 
 end

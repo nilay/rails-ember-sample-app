@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/flori/json.git
+  revision: 7f4cfd853f2c919d854fb95548a19980feff17e8
+  branch: v1.8
+  specs:
+    json (1.8.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -193,6 +200,7 @@ DEPENDENCIES
   byebug
   capybara
   factory_girl_rails
+  json!
   jwt
   kaminari
   listen (~> 3.0.5)
@@ -205,6 +213,7 @@ DEPENDENCIES
   shoulda-matchers
   spring
   spring-watcher-listen (~> 2.0.0)
+  tzinfo-data
 
 BUNDLED WITH
    1.13.6

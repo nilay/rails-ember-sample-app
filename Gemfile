@@ -22,6 +22,8 @@ gem 'bcrypt', '~> 3.1.7'
 # Use jwt for user authentication
 gem 'jwt'
 
+gem 'json', github: 'flori/json', branch: 'v1.8'
+
 # AMS brings convention over configuration to your JSON generation
 gem 'active_model_serializers', '~> 0.10.0'
 
@@ -54,3 +56,7 @@ end
 group :staging do
   gem 'rails_12factor'
 end
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
