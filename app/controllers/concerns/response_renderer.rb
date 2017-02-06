@@ -49,7 +49,7 @@ module ResponseRenderer
 
   # Common method to render create new resource
   def render_created message: , data: nil
-    render_succ message: message, data: data, status_code: 201
+    render_success message: message, data: data, status_code: 201
   end
 
 end
