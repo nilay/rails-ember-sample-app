@@ -7,17 +7,10 @@ RSpec.describe FriendsController, type: :routing do
       expect(:get => "/friends").to route_to("friends#index")
     end
 
-    it "routes to #new" do
-      expect(:get => "/friends/new").to route_to("friends#new")
-    end
-
     it "routes to #show" do
       expect(:get => "/friends/1").to route_to("friends#show", :id => "1")
     end
 
-    it "routes to #edit" do
-      expect(:get => "/friends/1/edit").to route_to("friends#edit", :id => "1")
-    end
 
     it "routes to #create" do
       expect(:post => "/friends").to route_to("friends#create")
